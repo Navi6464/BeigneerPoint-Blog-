@@ -1,0 +1,106 @@
+{% extends 'blog/basic.html' %}
+
+{% block title %} {{info.topic_name}} {% endblock %}
+
+{% block body %}
+
+{% load static %}
+<div class="container my-5">
+<div class="col-md-8">
+<h1 class="display-4">Part 1:Introduction of Tor browser</h1>
+<video width="900" height="340" controls>
+  <source src="{% static 'Tor/to1.mp4' %}" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+
+
+<h1 class="display-4 my-4">Part 2:How to use Tor for get Knowledge</h1>
+<video width="900" height="340" controls>
+  <source src="{% static 'Tor/tor2.mp4' %}" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+
+
+
+{% for i in info%}
+<h3>{{i.desc}}</h3>
+{% endfor %}
+
+</div>
+</div>
+
+{% endblock %}
+
+
+
+--------------------------------------
+
+div id="carouselExampleIndicators" class="carousel my-5" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+        <div style="margin-left:350px">
+	<h1 class="display-4">Part 1:Introduction of Tor browser</h1>
+	<video width="900" height="340" controls>
+	  <source src="{% static 'Tor/to1.mp4' %}" type="video/mp4">
+	Your browser does not support the video tag.
+	</video> 
+        </div>
+    
+    </div>
+    <div class="carousel-item">
+   	<div style="margin-left:350px">
+	<h1 class="display-4">Part 2:How to use Tor for get Knowledge</h1>
+	<video width="900" height="340" controls>
+	  <source src="{% static 'Tor/tor2.mp4' %}" type="video/mp4">
+	Your browser does not support the video tag.
+	</video> 
+        </div>
+    </div>
+   
+
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+{% if messages  %} 
+{% for message in messages %}               
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show mb-0" role="alert">
+  <strong>Holy guacamole!</strong> {{message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}              
+{% endif %}  
+
+
+
+
+
+
+
+

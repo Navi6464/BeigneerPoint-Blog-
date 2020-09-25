@@ -1,0 +1,121 @@
+{% extends 'blog/basic.html' %}
+
+{% block title %} {{info.topic_name}} {% endblock %}
+
+{% block body %}
+{% load static %}
+
+
+<div class="container my-5">
+<h1 class="display-4" style="font-family: 'Libre Baskerville', serif;">Tor Browser Basic Tutorial For Beigner's</h1>
+<div class="col-md-12 my-2">
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_whatsapp"></a>
+</div>
+
+<div class="card mb-3 my-3" >
+  <img src="{% static 'tor.png' %}" height=400 class="card-img-top" alt="...">
+  <div class="card-body">
+    <h1 class="card-title">Tor</h1>
+    <p>Tor is free and open-source software for enabling anonymous communication. The name derived from the acronym for the original software project name "The Onion Router". Tor directs Internet traffic through a free, worldwide, volunteer overlay network consisting of more than seven thousand relays to conceal a user's location and usage from anyone conducting network surveillance or traffic analysis. Using Tor makes it more difficult to trace Internet activity to the user: this includes "visits to Web sites, online posts, instant messages, and other communication forms".[9] Tor's intended use is to protect the personal privacy of its users, as well as their freedom and ability to conduct confidential communication by keeping their Internet activities unmonitored. </p>
+    <p>Tor does not prevent an online service from determining that it is being accessed through Tor. Tor protects a user's privacy, but does not hide the fact that someone is using Tor. Some websites restrict allowances through Tor.</p>
+    <p><a href="/wiki/Onion_routing" title="Onion routing">Onion routing</a> is implemented by <a href="/wiki/Encryption" title="Encryption">encryption</a> in the <a href="/wiki/Application_layer" title="Application layer">application layer</a> of a <a href="/wiki/Communication_protocol" title="Communication protocol">communication protocol</a> stack, nested like the layers of an <a href="/wiki/Onion" title="Onion">onion</a>. Tor encrypts the data, including the next node destination <a href="/wiki/IP_address" title="IP address">IP address</a>, multiple times and sends it through a <a href="/wiki/Virtual_circuit" title="Virtual circuit">virtual circuit</a> comprising successive, random-selection Tor relays. Each relay decrypts a layer of <a href="/wiki/Encryption" title="Encryption">encryption</a> to reveal the next relay in the circuit to pass the remaining encrypted data on to it. The final relay decrypts the innermost layer of encryption and sends the original data to its destination without revealing or knowing the source IP address. Because the routing of the communication was partly concealed at every hop in the Tor circuit, this method eliminates any single point at which the communicating peers can be determined through <a href="/wiki/Computer_and_network_surveillance" title="Computer and network surveillance">network surveillance</a> that relies upon knowing its source and destination.<sup id="cite_ref-Termanini2018_11-0" class="reference"><a href="#cite_note-Termanini2018-11">[11]</a></sup>
+    <span id="EgotisticalGiraffe"></span>
+    An adversary may try to de-anonymize the user by some means. One way this may be achieved is by <a href="/wiki/Exploit_(computer_security)" title="Exploit (computer security)">exploiting</a> vulnerable software on the user's computer.<sup id="cite_ref-guardian-nsa-target_12-0" class="reference"><a href="#cite_note-guardian-nsa-target-12">[12]</a></sup> The <a href="/wiki/National_Security_Agency" title="National Security Agency">NSA</a> had a technique that targets a vulnerability – which they codenamed "EgotisticalGiraffe" – in an outdated <a href="/wiki/Firefox" title="Firefox">Firefox</a> browser version at one time bundled with the Tor package<sup id="cite_ref-guardian-peeling_13-0" class="reference"><a href="#cite_note-guardian-peeling-13">[13]</a></sup> and, in general, targets Tor users for close monitoring under its <a href="/wiki/XKeyscore" title="XKeyscore">XKeyscore</a> program.<sup id="cite_ref-NDR_14-0" class="reference"><a href="#cite_note-NDR-14">[14]</a></sup> Attacks against Tor are an active area of academic research<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup> which is welcomed by the Tor Project itself.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup> The bulk of the funding for Tor's development has come from the <a href="/wiki/Federal_government_of_the_United_States" title="Federal government of the United States">federal government of the United States</a>,<sup id="cite_ref-pando_18-0" class="reference"><a href="#cite_note-pando-18">[18]</a></sup> initially through the <a href="/wiki/Office_of_Naval_Research" title="Office of Naval Research">Office of Naval Research</a> and <a href="/wiki/DARPA" title="DARPA">DARPA</a>.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup>
+    </p>
+    <p>The core principle of Tor, "onion routing", was developed in the mid-1990s by United States Naval Research Laboratory employees, mathematician Paul Syverson, and computer scientists Michael G. Reed and David Goldschlag, with the purpose of protecting U.S. intelligence communications online. Onion routing was further developed by DARPA in 1997</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+<div class="container">
+<div class="col-md-12">
+
+ 
+        
+	<h1 class="display-4">Part 1:Introduction of Tor browser</h1>
+	<video width="100%" height="340" controls>
+	  <source src="{% static 'Tor/to1.mp4' %}" type="video/mp4">
+	Your browser does not support the video tag.
+	</video> 
+       
+       <div class="my-5">  
+	<h1 class="display-4">Part 2:How to use Tor for get Knowledge</h1>
+	<video width="100%" height="340" controls>
+	  <source src="{% static 'Tor/tor2.mp4' %}" type="video/mp4">
+	Your browser does not support the video tag.
+	</video> 
+      </div>
+   
+
+</div>
+</div>
+
+
+
+
+<div class="container">
+<div class="col-md-12">
+<h2>Beigner Tutorial Comments</h2>
+
+<form action="/blog/tor/" method="post">
+  {% csrf_token %} 
+ <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" required="" class="form-control" name="name">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Comment Box</label>
+    <textarea class="form-control" required="" name="comment" rows="2"></textarea>
+    <button onclick=" location.href='/blog/tor/' " class="btn btn-primary my-2">Add comment</button>
+</div>
+
+</form>
+
+</div>
+</div>
+
+
+
+<div class="container" style="margin-top:50px">
+
+{% for i in comment %}
+<div class='col-md-12'>
+<div class="row my-3">
+<img src="{% static 'h.png' %}" border="20px" width="150" height="120"/>
+<div class="card" style="width:700px">
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{i.comment}}<span style="float:right;"><small class='bg-success'>{{i.timestamp}}</small></span></p>
+      <footer class="blockquote-footer"><i>By</i><cite title="Source Title"> {{i.user}}</cite></footer>
+    </blockquote>
+  </div>
+</div>
+</div>
+</div>
+
+{% endfor %}
+</div>
+
+
+
+{% endblock %}
+
+
+
+
